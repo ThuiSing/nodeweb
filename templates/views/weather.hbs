@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>links}}
+</head>
+<body>
+    {{>navbar}}
+
+    <section class="weather py-5">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="input_text">
+                        <form action="">
+                            <input id="CityName" type="text" placeholder="Enter your city name">
+                        <button id="submitbtn" class="btn" >search</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4 ">
+                <div class="col-xl-12">
+                    <div class="input_box p-3 text-center">
+                        <div class="ib_head clearfix mb-5 ">
+                            <span class="float-start" id="day">tuesday</span>
+                            <span class="float-end" id="date">13oct</span>
+                        </div>
+                       <h2 class="city" id=" city_error"> Get output here </h2>
+                       <div class="data_hide middle_layer  mt-5">
+                           <h4 id="CiName"></h4>
+                       <h3 id="temp">0.0 <sup>o</sup>C </h3>  <span id ="temp_status"><i class="fas fa-cloud"></i></span>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{>footer}}
+
+    <script src="./js/date.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

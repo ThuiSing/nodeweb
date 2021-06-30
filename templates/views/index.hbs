@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{>links}}
+  </head>
+  <body>
+    <!-- Nav Bar  -->
+    {{>navbar}}
+    <!-- Home Content -->
+    <section class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 main_left">
+                    <h6>Welcome to Weather app</h6>
+                    <h3 class="">Get The Latest Weather Info Of Your City</h3>
+                    <a class="btn btn-info rounded-pill shadow" href="/weather">Check Now</a>
+                </div>
+                <div class="col-xl-6 col-lg-6 main_right text-center">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="./images/img.png" alt="image">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./images/img1.png" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./images/img2.png"  alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    {{>footer}}
+  </body>
+</html>

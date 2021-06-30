@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5;
+    height: 100%;
+}
+html,h1,h2,h3,h4,h5,h6,a,p,span{
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+img{
+    max-width: 100%;
+}
+
+:root{
+    --bg-color : rgb(17, 118, 165);
+    --main-color: #fff;
+}
+
+/* navbar */
+nav{
+    background-color: var(--bg-color);
+    padding: 0 !important;
+}
+nav a,i{
+    color: var(--main-color)  !important;
+}
+.navbar-brand{
+    font-size: 1.7rem;
+    display: flex;
+    font-weight: 600;
+}
+
+.spin {
+    text-align: center;
+    width: 2.5rem;
+    animation: spinner 1s linear infinite ;
+}
+
+@keyframes spinner {
+    0%  {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}   
+}
+
+.nav_menu li{
+    padding: .8rem  1.9rem;
+}
+.nav_menu li a{
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: .3s ease-in-out;
+}
+.nav_menu li a:hover{
+    letter-spacing: .1rem;
+    color: rgb(201, 195, 195) !important;
+}
+
+/* Home section */
+section.main {
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main_left h6{
+    font-size: 1.2rem;
+}
+.main_left h3{
+    font-size: 2.2rem;
+    margin:1rem 0rem;
+    font-weight: 700;
+}
+.main_left a {
+    font-weight: 500;
+    width: 10rem;
+    padding: 0.8rem;
+}
+.main_right{
+    text-align: center;
+}
+.main_right img {
+    width: 24rem !important;
+    height: 20rem !important;
+}
+
+/* weather seaction */
+.weather {
+    min-height: 85vh;
+}
+.input_text{
+    width: 25rem;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+.input_text input{
+    width: 25rem;
+    padding: .7rem;
+    outline: none;
+    border-radius: .5rem;
+    border: 1px solid black;
+    
+}
+.input_text button {
+    font-weight: 500;
+    padding: 0.8rem 1.9rem;
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #3fa6d6;
+    border: #3fa6d6;
+    color: #fff;
+}
+.input_text button:hover{
+    background-color: #437f9b;
+    color: #fff;
+}
+.input_box {
+    border: 1px solid #000;
+    width: 30rem;
+    height: 24rem;
+    margin: auto;
+    background-color: #3fa6d6;
+    border-radius: .5rem;
+}
+.ib_head span {
+    font-size: 1.2rem;
+}
+.input_box h2 {
+    text-align: left;
+    font-size: 1.5rem;
+}
+.input_box h4 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+.input_box h3 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+#temp_status{
+    font-size: 2rem;
+}
+.data_hide{
+    visibility: hidden;
+}
+
+/* About section */
+.about{
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about_content h1 {
+    font-weight: 600;
+}
+/* error section */
+.error_main img{
+    width: 20rem;
+}
+.error_main {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.error_main h2{
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+.error_main h3{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.error_main p{
+    font-size: 1.1rem
+}
+.about_content h1 span {
+    color: #1176a5;
+    font-weight: 800;
+}
+/* Footer */
+footer{
+    margin-top: auto;
+    background-color:  var(--bg-color);
+}
+footer h6 {
+    color: var(--main-color);
+    margin-bottom: 0;
+}
+
+/* respoive */
+
+@media (max-width : 992px) {
+    .navbar{
+        padding: 1rem !important;
+    }
+    html{
+        font-size: 90%;
+    }
+    .main_right {
+        margin-top: 4rem;
+    }
+    .about img{
+        width: 80%;
+    }
+}
+@media (max-width : 630px) {
+    html{
+        font-size: 80%;
+    }
+    .about img{
+        width: 80%;
+    }
+}
+
+@media (max-width : 530px) {
+    html{
+        font-size: 65%;
+    }
+    .about{
+        text-align: center;
+    }
+    .about img{
+        width: 70%;
+    }
+    .about_content{
+        margin-top: 1.2rem;
+    }
+    .input_text {
+        width: 73%;
+    }
+    .input_box {
+        width: 90%;
+    }
+}
