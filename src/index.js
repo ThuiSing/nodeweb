@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const hbs = require("hbs");
+const port = process.env.PORT || 7500;
 
 
 const staticFile = path.join(__dirname,"../public");
@@ -25,6 +26,6 @@ app.get("/about",(req,res)=>{
 app.get("*",(req,res)=>{
     res.status(404).render("error")
 })
-app.listen(7500,()=>{
-    console.log("running port 7500")
+app.listen(port,()=>{
+    console.log(`running port ${port}`)
 })
